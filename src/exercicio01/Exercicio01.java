@@ -11,7 +11,6 @@ import jdbc.utilidades.Conexao;
 public class Exercicio01 {
 
 	public static void main(String[] args) {
-		//DaoRoupa dr = new DaoRoupa();
 		//testeConexao();
 		//salvar();
 		//consultar();
@@ -31,18 +30,18 @@ public class Exercicio01 {
 
 	static void salvar() {
 		DaoRoupa dr = new DaoRoupa();
-		Roupa r1 = new Roupa("Vestido", "Azul", "Seda");
-		if (dr.salvar(r1)) {
+		Roupa r4 = new Roupa("Shorts", "Azul Claro", "Jeans");
+		if (dr.salvar(r4)) {
 			System.out.println("Roupa cadastrada com sucesso!");
 		}
 		
-		Roupa r2 = new Roupa("Blazer", "Preto", "Lã Mista");
-		if (dr.salvar(r2)) {
+		Roupa r5 = new Roupa("Blusa", "Rosa", "Algodão");
+		if (dr.salvar(r5)) {
 			System.out.println("Roupa cadastrada com sucesso!");
 		}
 		
-		Roupa r3 = new Roupa("Camisa", "Branca", "Linho");
-		if (dr.salvar(r3)) {
+		Roupa r6 = new Roupa("Sobretudo", "Bege", "Lã Batida");
+		if (dr.salvar(r6)) {
 			System.out.println("Roupa cadastrada com sucesso!");
 		}
 
@@ -51,10 +50,10 @@ public class Exercicio01 {
 
 	static void excluir() {
 		DaoRoupa dr = new DaoRoupa();
-		Roupa rp = dr.consultar(1);
+		Roupa rp = dr.consultar(4);
 		System.out.println(rp);
-		dr.excluir(1);
-		rp = dr.consultar(1);
+		dr.excluir(4);
+		rp = dr.consultar(4);
 		System.out.println(rp);
 	}
 
@@ -65,17 +64,17 @@ public class Exercicio01 {
 
 	public static void consultarId() {
 		DaoRoupa dr = new DaoRoupa();
-		Roupa rp = dr.consultar(2);
+		Roupa rp = dr.consultar(4);
 		System.out.println(rp);
 	}
 	
 	static void alterar() {
 		DaoRoupa dr = new DaoRoupa();
-		Roupa rp = dr.consultar(2);
+		Roupa rp = dr.consultar(5);
 		System.out.println(rp);
-		rp.setModelo("Jaqueta");
-		rp.setCor("Marrom");
-		rp.setTecido("Couro");
+		rp.setModelo("Maiô");
+		rp.setCor("Coral");
+		rp.setTecido("Poliamida");
 		if(dr.alterar(rp)) {
 			System.out.println("Roupa alterada com sucesso!");
 			System.out.println(rp);
