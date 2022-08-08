@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<style type="text/css">
+nav {
+	background-color:#ffecb3
+}
+h1 {
+    margin: 0px;
+    font-size: 45px;
+    padding-left: 10px;
+}
+</style>
+
+<body>
+	<nav>
+		<div class="nav-wrapper">
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a th:href="@{/cadastro}">Cadastro</a></li>
+				<li><a th:href="@{/consulta}">Consulta</a></li>
+			</ul>
+			<h1>Agenda de Contatos</h1>
+		</div>
+	</nav>
+</body>
+
+</html>

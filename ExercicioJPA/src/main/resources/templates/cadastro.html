@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+<div class="container">
+	<h1>Cadastro</h1>
+	<form th:action="@{/cadastro}" method="post">
+		<label for="idmodelo">Modelo</label>
+		<input id="idmodelo" type="text" placeholder="Informe o modelo de sua preferência:" name="modelo" />
+
+		<label for="idcor">Cor</label>
+		<input id="idcor" type="text" placeholder="Informe a cor escolhida:" name="cor" />
+
+		<label for="idtecido">Tecido</label>
+		<input id="idtecido" type="text" placeholder="Informe o tecido desejado:" name="tecido" />
+		<button>Salvar</button>
+	</form>
+
+</div>
+</body>
+
+</html>
