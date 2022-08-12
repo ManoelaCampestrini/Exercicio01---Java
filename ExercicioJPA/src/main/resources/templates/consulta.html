@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<style type="text/css">
+
+.btn {
+	background-color: #ff7043
+}
+nav {
+	background-color:#ff7043
+}
+h1 {
+    margin: 0px;
+    font-size: 30px;
+    padding-left: 10px;
+    line-height: 200%;
+}
+h2 {
+    margin: 0px;
+    font-size: 30px;
+    padding-left: 10px;
+    line-height: 200%;
+    text-align: center;
+}
+h4 {
+    margin: 0px;
+    font-size: 20px;
+    padding-left: 10px;
+    line-height: 200%;
+    text-align: center;
+}
+a{
+	color:#ff7043;
+}
+
+</style>
+
+<body>
+	<nav>
+		<div class="nav-wrapper">
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a th:href="@{/cadastro}">Cadastro</a></li>
+				<li><a th:href="@{/consulta}">Consulta</a></li>
+			</ul>
+			<h1>Registro de Ideias - Desenvolvimento de Coleção de Moda</h1>
+		</div>
+	</nav>
+	<div class="container">
+		<h2>Consulte todos os registros das suas IDEIAS abaixo:</h2>
+		<h4>Faça modificações nos campos de registro ou exclua alguma ideia se considerar necessário!</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Modelo</th>
+					<th>Cor</th>
+					<th>Tecido</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="roupa: ${roupas}">
+					<td th:text="*{roupa.id}" />
+					<td th:text="*{roupa.modelo}" />
+					<td th:text="*{roupa.cor}" />
+					<td th:text="*{roupa.tecido}" />
+					<td>
+						<a th:href="@{'/consulta/'+${roupa.id}}">Editar</a>
+						<a th:href="@{'/delete/'+${roupa.id}}">Excluir</a>
+					</td>
+
+				</tr>
+			</tbody>
+		</table>
+		<a th:href="@{/cadastro}">Retornar para Cadastro</a>
+	</div>
+</body>
+
+</html>

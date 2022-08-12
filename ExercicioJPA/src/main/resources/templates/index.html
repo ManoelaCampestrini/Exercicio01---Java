@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<style type="text/css">
+nav {
+	background-color:#ff7043
+}
+h1 {
+    margin: 0px;
+    font-size: 30px;
+    padding-left: 10px;
+    line-height: 200%;
+}
+.card-content {
+	font-size: 25px;
+	margin: 20px;
+}
+</style>
+
+<body>
+	<nav>
+		<div class="nav-wrapper">
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a th:href="@{/cadastro}">Cadastro</a></li>
+				<li><a th:href="@{/consulta}">Consulta</a></li>
+			</ul>
+			<h1>Registro de Ideias - Desenvolvimento de Coleção de Moda</h1>
+		</div>
+	</nav>
+	  <div class="container col s12 m7">
+    <div class="card horizontal">
+      <div class="card-stacked">
+        <div class="card-content center-align">
+          <p>Para registrar suas ideias diárias acerca dos <b>INSIGHTS</b> de sua coleção, acesse o LINK de cadastro disponível no canto superior direito!</p>
+          <p>Para consultar o registro das suas <b>IDEIAS</b>, acesse o LINK de consulta disponível no canto superior direito!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
