@@ -1,10 +1,10 @@
-package com.exerciciojpa;
+package com.testes;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ExercicioJpaApplicationTests {
+class ExercicioApiRestApplicationTests {
 
 	@Test
 	void contextLoads() {
